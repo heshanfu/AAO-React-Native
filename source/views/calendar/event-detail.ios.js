@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import {Text, ScrollView, StyleSheet} from 'react-native'
+import {TextInput, ScrollView, StyleSheet} from 'react-native'
 import {Cell, Section, TableView} from 'react-native-tableview-simple'
 import type {CleanedEventType} from './types'
 import type {TopLevelViewPropsType} from '../types'
@@ -14,7 +14,8 @@ import delay from 'delay'
 
 const styles = StyleSheet.create({
   chunk: {
-    paddingVertical: 10,
+    marginVertical: 10,
+    fontSize: 16,
   },
 })
 
@@ -25,9 +26,14 @@ function MaybeSection({header, content}: {header: string, content: string}) {
     <Section header={header}>
       <Cell
         cellContentView={
-          <Text selectable={true} style={styles.chunk}>
-            {content}
-          </Text>
+          <TextInput
+            multiline={true}
+            editable={false}
+            // selectable={true}
+            dataDetectorTypes="all"
+            style={styles.chunk}
+            value={content}
+          />
         }
       />
     </Section>
