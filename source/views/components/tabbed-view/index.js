@@ -34,6 +34,12 @@ export const TabNavigator: ComponentType = (screens, options = {}) =>
 		tabBarOptions: {
 			inactiveTintColor: c.iosTabBarInactiveColor,
 			activeTintColor: c.iosTabBarActiveColor,
+			style: Platform.select({
+				ios: {
+					backgroundColor: '#fff',
+				},
+				android: {},
+			}),
 			...(options.tabBarOptions || {}),
 			labelStyle: {
 				...Platform.select({
