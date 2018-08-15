@@ -289,7 +289,7 @@ export const androidTabBarForeground = firstReadable(androidTabBarBackground, [
 const iosTabBarBackground = '#F7F7F7'
 export const iosTabBarActiveColor = firstReadable(iosTabBarBackground, [
 	accent,
-	sto.black,
+	black,
 ])
 
 export const androidStatusBarColor = tinycolor(navigationBackground)
