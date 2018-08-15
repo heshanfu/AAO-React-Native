@@ -287,10 +287,12 @@ export const androidTabBarForeground = firstReadable(androidTabBarBackground, [
 
 // not used in the gui; just used for calculations
 const iosTabBarBackground = '#F7F7F7'
+const iosDefaultDisabledColor = '#909090'
 export const iosTabBarActiveColor = firstReadable(iosTabBarBackground, [
 	accent,
 	black,
 ])
+export const iosTabBarInactiveColor = iosDefaultDisabledColor
 
 export const androidStatusBarColor = tinycolor(navigationBackground)
 	.darken(20)
