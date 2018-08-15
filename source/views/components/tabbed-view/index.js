@@ -32,6 +32,7 @@ export const TabNavigator: ComponentType = (screens, options = {}) =>
 		},
 		activeTintColor: c.androidTabBarForeground,
 		tabBarOptions: {
+			inactiveTintColor: c.iosTabBarInactiveColor,
 			activeTintColor: c.iosTabBarActiveColor,
 			...(options.tabBarOptions || {}),
 			labelStyle: {
