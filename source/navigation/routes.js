@@ -10,6 +10,7 @@ import {
 import CalendarView, {EventDetail as EventDetailView} from '../views/calendar'
 import {ContactsDetailView, ContactsView} from '../views/contacts'
 import CreditsView from '../views/settings/credits'
+import {DebugView} from '../views/settings/debug'
 import {
 	DictionaryDetailView,
 	DictionaryEditorView,
@@ -60,6 +61,7 @@ export const routes = {
 	ContactsView: {screen: ContactsView},
 	ContactsDetailView: {screen: ContactsDetailView},
 	CreditsView: {screen: CreditsView},
+	DebugView: {screen: DebugView},
 	DictionaryDetailView: {screen: DictionaryDetailView},
 	DictionaryView: {screen: DictionaryView},
 	DictionaryEditorView: {screen: DictionaryEditorView},
