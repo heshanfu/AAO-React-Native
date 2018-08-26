@@ -23,6 +23,7 @@ class OddsAndEndsSection extends React.PureComponent<Props> {
 			<React.Fragment>
 				<Section header="ODDS &amp; ENDS" sectionTintColor={sectionBgColor}>
 					<Cell cellStyle="RightDetail" detail={version} title="Version" />
+
 					<CellToggle
 						label="Share Analytics"
 						// These are both inverted because the toggle makes more sense as
@@ -30,6 +31,7 @@ class OddsAndEndsSection extends React.PureComponent<Props> {
 						onChange={val => this.props.onChangeFeedbackToggle(!val)}
 						value={!this.props.feedbackDisabled}
 					/>
+
 					{IS_DEBUG ? (
 						<PushButtonCell onPress={this.onDebugButton} title="Debug" />
 					) : null}
