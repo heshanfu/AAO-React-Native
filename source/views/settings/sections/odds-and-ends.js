@@ -8,6 +8,7 @@ import {setFeedbackStatus} from '../../../redux/parts/settings'
 import {connect} from 'react-redux'
 import {CellToggle} from '../../../components/cells/toggle'
 import {sectionBgColor} from '../../../components/colors'
+import {IS_DEBUG} from '../../../lib/constants'
 
 type Props = TopLevelViewPropsType & {
 	onChangeFeedbackToggle: (feedbackDisabled: boolean) => any,
@@ -19,7 +20,7 @@ class OddsAndEndsSection extends React.PureComponent<Props> {
 
 	render() {
 		const DebugCell = () =>
-			version.includes('beta') ? (
+			IS_DEBUG ? (
 				<PushButtonCell onPress={this.onDebugButton} title="Debug" />
 			) : null
 		return (
